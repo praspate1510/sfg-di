@@ -1,6 +1,7 @@
 package com.yukraainfo.sfgdi;
 
 import com.yukraainfo.sfgdi.controller.ConstructorInjectedController;
+import com.yukraainfo.sfgdi.controller.PropertyInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,5 +16,9 @@ public class SfgDiApplication {
 
         ConstructorInjectedController cic = (ConstructorInjectedController)appContext.getBean("constructorInjectedController");
         System.out.println("Say greeting : " + cic.sayGreeting());
+
+        PropertyInjectedController pic = (PropertyInjectedController)appContext.getBean("propertyInjectedController");
+        System.out.println("Say greeting : " + pic.sayGreeting());
+
         }
 }

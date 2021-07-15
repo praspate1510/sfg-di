@@ -1,16 +1,14 @@
 package com.yukraainfo.sfgdi.controller;
 
-import com.yukraainfo.sfgdi.services.GreetingServiceImpl;
+import com.yukraainfo.sfgdi.services.ConstructorInjectedGreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConstructorInjectedControllerTest {
     ConstructorInjectedController constructorInjectedController;
     @BeforeEach
     void setUp() {
-        constructorInjectedController = new ConstructorInjectedController(new GreetingServiceImpl());
+        constructorInjectedController = new ConstructorInjectedController(new ConstructorInjectedGreetingServiceImpl());
     }
 
     @Test
